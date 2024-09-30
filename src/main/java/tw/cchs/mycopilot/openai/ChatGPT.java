@@ -23,10 +23,19 @@ public class ChatGPT {
     String systemRole;
 
     public ChatGPT() {
-        chatGPTModel = new ChatGPTModel();
-        model = chatGPTModel.getCurrentModel();
-        messages = new ArrayList<>();
-        systemRole = "你是我的AI，助手要負責回答我的任何問題";
+        this.chatGPTModel = new ChatGPTModel();
+        init();
+    }
+
+    public ChatGPT(ChatGPTModel chatGPTModel) {
+        this.chatGPTModel = chatGPTModel;
+        init();
+    }
+
+    private void init() {
+        this.model = chatGPTModel.getCurrentModel();
+        this.messages = new ArrayList<>();
+        this.systemRole = "你是我的AI，助手要負責回答我的任何問題";
     }
 
     public String call(String content) {

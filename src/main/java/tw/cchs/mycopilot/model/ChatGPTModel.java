@@ -5,10 +5,20 @@ import java.util.List;
 
 public class ChatGPTModel {
 
-    private final List<String> modelNames;
+    private List<String> modelNames;
     private String currentModel;
 
     public ChatGPTModel() {
+        init();
+        setCurrentModel("gpt-3.5-turbo");
+    }
+
+    public ChatGPTModel(String model) {
+        init();
+        setCurrentModel(model);
+    }
+
+    private void init() {
         modelNames = new ArrayList<>();
         modelNames.add("gpt-3.5-turbo");
         modelNames.add("gpt-4");
@@ -16,8 +26,6 @@ public class ChatGPTModel {
         modelNames.add("gpt-4o-mini");
         modelNames.add("o1-preview");
         modelNames.add("o1-mini");
-
-        currentModel = "gpt-3.5-turbo";
     }
 
     // 添加新模型
