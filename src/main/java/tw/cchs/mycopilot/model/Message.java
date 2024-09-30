@@ -1,4 +1,4 @@
-package tw.cchs.mycopilot;
+package tw.cchs.mycopilot.model;
 
 public class Message {
 
