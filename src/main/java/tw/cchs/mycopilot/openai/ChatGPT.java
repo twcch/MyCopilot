@@ -76,6 +76,14 @@ public class ChatGPT {
 
     }
 
+    public String callBatch(String content) {
+
+
+
+        return null;
+
+    }
+
     public String getAPI_KEY() {
         return API_KEY;
     }
